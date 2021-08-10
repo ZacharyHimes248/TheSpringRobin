@@ -5,13 +5,13 @@ session_start();
 <head>
 <meta charset="UTF-8">
 <title>Login</title>
-<link href="../HTMLfolders/login.css" rel="stylesheet" type="text/css">
-<link href="../includes/signup&signin.css" rel="stylesheet" type="text/css">
+<link href="login.css" rel="stylesheet" type="text/css">
+<link href="/includes/signup&signin.css" rel="stylesheet" type="text/css">
 </head>
 <div class="box">
 
 	<div class="img">
-		<img src="../SiteImages/cabinLogo.png" width="356" height="223" alt=""/>
+		<img src="/SiteImages/cabinLogo.png" width="356" height="223" alt=""/>
 	</div>
 
 
