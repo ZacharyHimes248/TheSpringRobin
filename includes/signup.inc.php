@@ -14,30 +14,30 @@ if(isset($_POST['signup-submit'])){
 	if(empty($username) || empty($email) || empty($pwd) || empty($passwordRepeat))
 	{
 
-		header("Location: ../HTMLfolders/signup.php?error=allFieldsEmpty&uid=".$username."&mail=".$mail);
+		header("Location: ../signup.php?error=allFieldsEmpty&uid=".$username."&mail=".$mail);
 		exit();
 	}
 	else if(!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username))
 			{
-			    header("Location: ../HTMLfolders/signup.php?=invalidEmailUid");
+			    header("Location: ../signup.php?=invalidEmailUid");
 	            exit();
 			}
     else if (!filter_var($email, FILTER_VALIDATE_EMAIL))
         {
 
-    	       header("Location:../HTMLfolders/signup.php?error=invalidemail= ".$username);
+    	       header("Location:../signup.php?error=invalidemail= ".$username);
     	          exit();
         }
 
     	else if (!preg_match("/^[a-zA-Z0-9]*$/", $username))
         {
 
-    	       header("Location: ../HTMLfolders/signup.php?error=invaliduid&mail= ".$email);
+    	       header("Location: ../signup.php?error=invaliduid&mail= ".$email);
     	          exit();
         }
     	else if($pwd !== $passwordRepeat)
     	{
-    		header("Location: ../HTMLfolders/signup.php?error=passwordcheck&uid= " .$username."&mail=".$email);
+    		header("Location: ../signup.php?error=passwordcheck&uid= " .$username."&mail=".$email);
     		exit();
     	}
 
@@ -46,7 +46,7 @@ if(isset($_POST['signup-submit'])){
 		$sql = "SELECT uidUsers FROM users WHERE uidUsers=? AND pwdUsers=?";
 		$stmt = mysqli_stmt_init($conn);
 		if(!mysqli_stmt_prepare($stmt,$sql)){
-			header("Location: ../HTMLfolders/signup.php?error=sqlerror");
+			header("Location: ../signup.php?error=sqlerror");
 			exit();
 		}
 		else
@@ -56,7 +56,7 @@ if(isset($_POST['signup-submit'])){
 				mysqli_stmt_store_result($stmt);
 				$resultCheck = mysqli_stmt_num_rows($stmt);
 				if($resultCheck > 0){
-					header("Location: ../HTMLfolders/signup.php?error=usertaken&mail=".$email);
+					header("Location: ../signup.php?error=usertaken&mail=".$email);
 					exit();
 				}
 				else
@@ -64,7 +64,7 @@ if(isset($_POST['signup-submit'])){
 						$sql = "INSERT INTO users (uidUsers, emailUsers, pwdUsers) VALUES (?, ?, ?)";
 							$stmt = mysqli_stmt_init($conn);
 						if(!mysqli_stmt_prepare($stmt,$sql)){
-							header("Location: ../HTMLfolders/signup.php?error=sqlerror");
+							header("Location: ../signup.php?error=sqlerror");
 							exit();
 					}
 					else
@@ -73,7 +73,7 @@ if(isset($_POST['signup-submit'])){
 							$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 							mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPwd);
 							mysqli_stmt_execute($stmt);
-							header("Location: ../HTMLfolders/header.php?signup=success");
+							header("Location: ../header.php?signup=success");
 							exit();
 						}
 
@@ -88,7 +88,7 @@ if(isset($_POST['signup-submit'])){
 
 else
 {
-	header("Location: ../HTMLfolders/signup.php?");
+	header("Location: ../signup.php?");
 							exit();
 }
 ?>
