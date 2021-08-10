@@ -9,7 +9,7 @@ if(isset($_POST['login']))
 
 	if(empty($mailuid) || empty($password))
 	{
-		header("Location: ../HTMLfolders/header.php?error=emptyfields");
+		header("Location: ../header.php?error=emptyfields");
 		exit();
 	}
 	else
@@ -18,7 +18,7 @@ if(isset($_POST['login']))
 		$stmt = mysqli_stmt_init($conn);
 		if(!mysqli_stmt_prepare($stmt, $sql))
 		{
-			header("Location: ../HTMLfolders/header.php?error=sqlerror");
+			header("Location: ../header.php?error=sqlerror");
 			exit();
 		}
 
@@ -32,7 +32,7 @@ if(isset($_POST['login']))
 				$pwdCheck = password_verify($password, $row['pwdUsers']);
 				if($pwdCheck == false)
 				{
-					header("Location: ../HTMLfolders/header.php?error=incorrect");
+					header("Location: ../header.php?error=incorrect");
 					exit();
 				}
 			else if($pwdCheck == true)
@@ -40,13 +40,13 @@ if(isset($_POST['login']))
 					session_start();
 					$_SESSION['userId'] = $row['idUsers'];
 					$_SESSION['userUId'] = $row['uidUsers'];
-					header("Location: ../HTMLfolders/HomePage.php?login=success");
+					header("Location: ../HomePage.php?login=success");
 					exit();
 				}
 			}
 			else
 			{
-				header("Location: ../HTMLfolders/header.php?error=incorrect");
+				header("Location: ../header.php?error=incorrect");
 				exit();
 			}
 		}
@@ -55,7 +55,7 @@ if(isset($_POST['login']))
 }
 else
 {
-	header("Location: ../HTMLfolders/header.php?error=incorrect");
+	header("Location: ../header.php?error=incorrect");
 			exit();
 
 }
