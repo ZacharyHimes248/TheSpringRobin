@@ -1,8 +1,11 @@
 <?php
 if(isset($_POST['login']))
 {
-    session_start();
+  session_start();
 	require 'dbh.inc.php';
+  <script type="text/javascript">
+  alert('<?php echo (\'HERE\'); ?>');
+</script>
 
 	$mailuid = $_POST['mailuid'];
 	$password = $_POST['pwd'];
