@@ -40,8 +40,8 @@ session_start();
 			<input type="password" id="pass" name="pwd" placeholder="Passsword">
 			<button class="bttn" type="submit" name="login" value="Login">Login</button>
 		</form>
-		<button id="signup" type="submit"><a id="signup" href="../HTMLfolders/signup.php">Create a new account >></a></button>
-		<form action="../includes/signup.inc.php"></form>
+		<button id="signup" type="submit"><a id="signup" href="/HTMLfolders/signup.php">Create a new account >></a></button>
+		<form action="/includes/signup.inc.php"></form>
 		<!-- <button class="logout" type="submit" name="logout-submit">Logout</button> -->
 	</div>
 
