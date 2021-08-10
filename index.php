@@ -35,7 +35,7 @@ session_start();
 
 	}
 		 ?>
-		<form action="../includes/login.inc.php" method="post">
+		<form action="/includes/login.inc.php" method="post">
 			<input type="text" id="username" name="mailuid" placeholder="Username/ E-mail">
 			<input type="password" id="pass" name="pwd" placeholder="Passsword">
 			<button class="bttn" type="submit" name="login" value="Login">Login</button>

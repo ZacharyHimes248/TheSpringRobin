@@ -6,7 +6,6 @@ if(isset($_POST['login']))
 
 	$mailuid = $_POST['mailuid'];
 	$password = $_POST['pwd'];
-echo("LOGIN.php");
 	if(empty($mailuid) || empty($password))
 	{
 		header("Location: ../header.php?error=emptyfields");
