@@ -1,0 +1,403 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+body
+{
+	width: 100%;
+	text-align: center;
+	background-color: #ffffff;
+	height: 600px;
+
+}
+
+/*Navigation Bar CSS */
+nav
+{
+	font-family: "Roboto Cn", sans-serif;
+	padding: 20px;
+	padding-top: 10px;
+
+}
+
+nav ul
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li
+{
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 10px;
+  position: relative;
+}
+
+nav a
+{
+  color:#272727;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+nav a:hover {
+  color:#bd7558;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color:#bd7558;
+  position: absolute;
+  top: 0px;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+/*End Navigation Bar CSS*/
+
+img
+{
+	padding-top: 15px;
+}
+
+
+/*Quote CSS */
+#quote
+{
+	float: center;
+	display: inline-block;
+	margin: 0 auto;
+	height: 600px;
+	width: 98%;
+	background-color: #ffffff;
+	padding-top: 10px;
+	padding-bottom: px;
+}
+
+#quote li
+{
+	float: center;
+	line-height: 1.5;
+	max-width: 620px;
+	display: inline-block;
+	padding-top: 20px;
+	padding-bottom: 70px;
+	color: #272727;
+	font-size: 27px;
+}
+
+#quote h1
+{
+	font-size: 60px;
+	letter-spacing: 4px;
+	padding-top: 110px;
+	padding-bottom: 0px;
+	color: #272727;
+}
+/*Quote end CSS */
+
+/*Pdf Image Grid*/
+.grid
+{
+
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 2px;
+}
+h2
+{
+
+}
+.grid p
+{
+	max-width: 520px;
+}
+.grid  li
+{
+	padding-left: 25px;
+	padding-right: 35px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	width: 500px;
+	text-align: left;
+}
+.grid img
+{
+	 height: 300px;
+      width: 300px;
+		border-radius: 25px;
+      -webkit-transition: all .2s ease;
+      -moz-transition: all .2s ease;
+      -ms-transition: all .2s ease;
+      transition: all .2s ease;
+	padding: 10px;
+}
+
+
+.grid img:hover
+{
+		 width: 340px;
+      height: 340px;
+}
+.grid a{
+  color:#272727;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.grid a:hover
+{
+  color:#bd7558;
+}
+/*End PDF Grid CSS*/
+
+
+ h1
+{
+	padding-top: 10px;
+}
+.infoblock p
+{
+	text-align: center;
+	max-width: 400px;
+}
+
+
+/*image Hyperlink*/
+.imgLink
+{
+	display: inline-block;
+	margin: 0 auto;
+	padding: 3px;
+	height: 100%;
+	width: 90%;
+	background-color:#cecdcb;
+	padding-top: 10px;
+}
+
+
+/*Main Blocks of informations style CSS*/
+.infoBlock
+{
+	display: inline-block;
+	align-content: left;
+	margin: 0 auto;
+	padding: 3px;
+	height: 100%;
+	width: 85%;
+	background-color:#cecdcb;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.infoBlock h1
+{
+	font-family:"LTC Globe Gothic Bold Italic";
+	text-transform: capitalize;
+	font-weight: 900;
+	font-size: 45px;
+	text-align: center;
+	padding-bottom: 25px;
+	color: #272727;
+}
+.infoBlock p
+{
+	font-family:  Euphemia UCAS
+}
+
+.infoBlock ul li
+{
+
+	font-family: "Euphemia UCAS";
+ 	max-width: 415px;
+	line-height: 25px;
+  	margin-right: auto;
+ 	 margin-left: auto;
+	font-size: 15px;
+	font-weight: 100;
+	padding-bottom: 15px;
+	list-style: none;
+	text-align: center;
+	color: #272727;
+}
+
+.infoBlock a
+{
+	target: _blank;
+	background: #272727;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #272727;
+	padding: 10px 40px;
+	width: 300px;
+	height: 50px;
+	outline: none;
+	color:#ffffff;
+	border-radius: 0px;
+	transition: .25s;
+	cursor: pointer;
+	text-decoration: none;
+}
+.infoBlock li
+{
+	font-family: "Euphemia UCAS";
+ 	max-width: 415px;
+	line-height: 25px;
+  	margin-right: auto;
+ 	 margin-left: auto;
+	font-size: 15px;
+	font-weight: 100;
+	padding-bottom: 15px;
+	list-style: none;
+	text-align: center;
+	color: #272727;
+}
+.infoBlock h2
+{
+	font-family:"LTC Globe Gothic Bold Italic";
+	text-transform: capitalize;
+	font-weight: 900;
+	font-size: 45px;
+	text-align: center;
+	padding-bottom: 35px;
+	color: #272727;
+}
+
+.infoBlock a:hover
+{
+	background-color:#bd7558;
+}
+
+.infoBlock a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color:#bd7558;
+  position: absolute;
+  top: 0px;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+.infoBlock a:hover::before {
+  width: 100%;
+}
+/*Main Blocks of informations style End*/
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*line seperation*/
+hr
+{
+	width: 100%;
+	height: 10px;
+	border: none;
+	color: #73726e;
+}
+
+
+/*logo spring Robin*/
+.springRobin
+{
+	padding-top: 20px;
+	padding-bottom: 0px;
+}
+
+
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+.container img
+{
+	position: absolute;
+	left: 676px;
+  	top: 80px;
+	bottom: 15px;
+
+}
+
+
+header {
+	width: 100%;
+  background: #ffffff;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+.parallax {
+  /* The image used */
+  background-image: url("../SiteImages/homePage.jpg");
+
+  /* Set a specific height */
+  height: 600px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax h1
+{
+	font-size: 70px;
+	color: black;
+}
+
+.footerGrid
+{
+	margin: 0 auto;
+	padding: 3px;
+	height: 400px;
+	width: 90%;
+	background-color:#272727;
+	padding-top: 10px;
+	display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+ background-color:#272727;
+	justify-items: center;
+}
+
+
+.footerGrid a{
+  color:#272727;
+}
+
+.footerGrid a:hover
+{
+  color:#bd7558;
+}
+
+.paymentButton button
+{
+	padding: 0px;
+}
